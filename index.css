@@ -2,6 +2,70 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 0;
+
+
+}
+
+.navbar .right {
+    width: 400px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .right img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar .left {
+    font-size: 32px;
+    font-weight: bold;
+
+}
+
+.navbar .right a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .right a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.navbar .hamburger {
+
+
+    width: 24px;
+    height: 24px;
+}
+
+.navbar .bar {
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 10px;
+
+}
+
+.navbar .hamburger {
+    display: none;
+}
+
 .project-grid {
     display: grid;
     grid-template-areas:
@@ -14,8 +78,6 @@ body {
         "foam foam dimensional";
     gap: 16px;
     width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
 
 }
 
@@ -95,8 +157,17 @@ body {
     color: white;
 }
 
+.footer {
+    text-align: center;
+    padding: 64px;
+}
+
 
 @media only screen and (width <=1100px) {
+    .container {
+        max-width: 100%;
+    }
+
     .project-grid {
         background-color: purple;
         max-width: 100%;
@@ -116,7 +187,37 @@ body {
 }
 
 @media only screen and (width <=768px) {
+    .navbar {
+        padding: 16px 24px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: white;
+        width: 100%;
+
+    }
+
+    .navbar .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .navbar .right {
+        display: none;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 32px;
+    }
+
     .project-grid {
+        margin-top: 100px;
         background-color: green;
         max-width: 100%;
         grid-template-areas:
